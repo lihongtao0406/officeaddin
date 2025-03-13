@@ -1,0 +1,158 @@
+#sidebar {
+    padding-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 240, 240, 0.9);
+    border-right: 1px solid #ccc;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 1000;
+}
+
+#sidebar.active {
+    transform: translateX(0);
+}
+
+#mainContent {
+    flex: 1;
+
+}
+
+#general-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#noteTitle {
+    width: 70%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* overlay div css */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* dialog css */
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* dialog button css */
+.dialog button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dialog button:hover {
+    background-color: #0056b3;
+}
+
+
+
+#jobnote-option {
+    display: none;
+}
+
+/* current */
+#job-box {
+    display: none;
+    margin-bottom: 10px;
+}
+
+#row-job-box {
+    display: flex;
+}
+
+#closejob-box {
+    display: flex;
+    margin-top: 10px;
+}
+
+#closejob-container input {
+    width: 50px;
+}
+
+.option-css {
+    position: relative;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.option-css::before {
+    content: "Optional";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+.jobnote-option-margin {
+    margin-top: 10px;
+}
+
+#toggleSidebar {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+#arrowIcon_show {
+    width: 35px;
+    height: 35px;
+    transition: filter 0.3s ease;
+}
+
+#toggleSidebar:hover #arrowIcon_show {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(700%) hue-rotate(190deg);
+}
+
+#arrow-left {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+#arrowIcon_hide {
+    width: 35px;
+    height: 35px;
+    transition: filter 0.3s ease;
+}
+
+#arrow-left:hover #arrowIcon_hide {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(700%) hue-rotate(190deg);
+}
